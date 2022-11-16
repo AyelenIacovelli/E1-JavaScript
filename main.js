@@ -65,27 +65,19 @@ precioMenor600(600);
 
 // c) El nombre de cada pizza con su respectivo precio.
 
-const pizzasConPrecios = pizzas.filter( (pizzas) => {
-    return pizzas.nombre && pizzas.precio;
-});
-
-pizzasConPrecios.forEach( (pizzas) => {
+const pizzasConPrecio = pizzas.forEach((pizzas) => {
     console.log(`La pizza ${pizzas.nombre} tiene un precio de $${pizzas.precio}`);
 });
 
 
 //d) Todos los ingredientes de cada pizza (En cada iteración imprimir los ingredientes de la pizza actual). Ayuda: van a tener que realizar dos recorridos, ya que cada pizza del array de pizzas tiene un array de ingredientes.
 
-const pizzasEIngredientes = pizzas.filter ( (pizzas) => {
-    return pizzas.nombre && pizzas.ingredientes;
+pizzas.forEach( (pizzas) => {
+    console.log(`La pizza ${pizzas.nombre} tiene los ingredientes: `);
+    pizzas.ingredientes.forEach( (ingredientes) => {
+        console.log(`- ${ingredientes}`);
+    })
 });
-
-pizzasEIngredientes.forEach ( (pizzas) => {
-    console.log(`La pizza ${pizzas.nombre} tiene los ingredientes: ${pizzas.ingredientes}`);
-});
-
-
-
 
 
 
