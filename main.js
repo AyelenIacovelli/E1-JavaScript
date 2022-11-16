@@ -41,12 +41,12 @@ const pizzas = [
 // a)  Imprimir en consola las pizzas que tengan un id impar.
 
 const idImpares = pizzas.filter( (pizza) => {
-     return pizza.id % 2 === 0; 
+     return pizza.id % 2 == !0; 
 
 });
 
 idImpares.forEach((pizza) => {
-    console.log(' La pizza ${pizza.nombre} tiene id impar ');
+    console.log(`La pizza ${pizza.nombre} tiene id impar`);
 });
 
 
